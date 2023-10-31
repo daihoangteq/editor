@@ -63,6 +63,7 @@ const MarkdownEditor = () => {
             title: "Upload Image",
           },
         ],
+        toolbarTips:true,
       });
       console.log(editorRef.current);
     })();
