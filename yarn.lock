@@ -473,6 +473,18 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
+"@types/codemirror@^5.60.12":
+  version "5.60.12"
+  resolved "https://registry.yarnpkg.com/@types/codemirror/-/codemirror-5.60.12.tgz#09daf6f2af381d1613a50b2b53ff2abf0232045b"
+  integrity sha512-SFSj5Tb/mtQoVgaltsipdRGG1PkcFu/L0OXPNBGCXYUQtwsNoAGRNNHOTl1jYcQUcEI77EiUfk94bgETTbSo/A==
+  dependencies:
+    "@types/tern" "*"
+
+"@types/estree@*":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.4.tgz#d9748f5742171b26218516cf1828b8eafaf8a9fa"
+  integrity sha512-2JwWnHK9H+wUZNorf2Zr6ves96WHoWDJIftkcxPKsS7Djta6Zu519LarhRNljPXkpsZR2ZMwNCPeW7omW07BJw==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -510,6 +522,13 @@
   version "0.16.5"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.5.tgz#4751153abbf8d6199babb345a52e1eb4167d64af"
   integrity sha512-s/FPdYRmZR8SjLWGMCuax7r3qCWQw9QKHzXVukAuuIJkXkDRwp+Pu5LMIVFi0Fxbav35WURicYr8u1QsoybnQw==
+
+"@types/tern@*":
+  version "0.23.6"
+  resolved "https://registry.yarnpkg.com/@types/tern/-/tern-0.23.6.tgz#8927626347db76a998d27889c5c2dbf18cb42115"
+  integrity sha512-ntalN+F2msUwz7/OCCADN4FwxtIGqF4Hqwxd15yAn0VOUozj1VaIrH4Prh95N8y69K3bQpHFVGwTJDZC4oRtvA==
+  dependencies:
+    "@types/estree" "*"
 
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0":
   version "6.9.0"
@@ -915,6 +934,11 @@ codemirror@*:
     "@codemirror/search" "^6.0.0"
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
+
+codemirror@5.65.15:
+  version "5.65.15"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.65.15.tgz#66899278f44a7acde0eb641388cd563fe6dfbe19"
+  integrity sha512-YC4EHbbwQeubZzxLl5G4nlbLc1T21QTrKGaOal/Pkm9dVDMZXMH7+ieSPEOZCtO9I68i8/oteJKOxzHC2zR+0g==
 
 color-convert@2.0.1, color-convert@^2.0.1:
   version "2.0.1"

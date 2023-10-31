@@ -14,6 +14,7 @@
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
     "autoprefixer": "10.4.16",
+    "codemirror": "5.65.15",
     "eslint": "8.52.0",
     "eslint-config-next": "14.0.0",
     "next": "13.4.6",
@@ -25,6 +26,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@types/codemirror": "^5.60.12",
     "eazy-editor": "file:ckeditor5"
   }
 }

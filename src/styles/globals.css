@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -31,7 +31,8 @@ body {
 }
 
 .main-content img {
-  max-width: 100%
+  max-width: 100%;
+  display: inline;
 }
 
 .main-content>h1,.main-content>h2,.main-content>h3,.main-content>h4,.main-content>h5,.main-content>h6 {

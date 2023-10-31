@@ -9,7 +9,6 @@ const toolbarEditor = [
   "ordered-list",
   "clean-block",
   "link",
-  "image",
   "table",
   "horizontal-rule",
   "preview",

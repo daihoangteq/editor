@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import type Editor from "@ckeditor/ckeditor5-core/src/editor/editor";
-import type { PluginConstructor } from "@ckeditor/ckeditor5-core/src/plugin";
+import Editor from "@ckeditor/ckeditor5-core/src/editor/editor";
 import { FileLoader } from "@ckeditor/ckeditor5-upload";
 const EazyEditor = () => {
   function uploadAdapter(loader: FileLoader) {
@@ -37,32 +36,39 @@ const EazyEditor = () => {
     ) => {
       return uploadAdapter(loader);
     };
-    // editor.plugins.get("FileRepository").createUploadAdapter = (loader: {
-    //     file: Promise<File>;
-    // }) => {
-    //     return uploadAdapter(loader);
-    // };
   }
   const editorRef = useRef<HTMLDivElement | null>(null);
+  const editorStateRef = useRef<Editor | null>(null);
   useEffect(() => {
     (async () => {
       if (!editorRef.current) return;
       const ClassicEditor = await import("eazy-editor/build/ckeditor").then(
         (mod) => mod.default
       );
-      console.log(ClassicEditor);
       ClassicEditor.create(editorRef.current, {
-        // Editor configuration.
         extraPlugins: [uploadPlugin],
       })
         .then((editor) => {
-          console.log(editor);
+          editorStateRef.current = editor;
         })
         .catch((err) => console.log(err));
     })();
   }, []);
 
-  return <div ref={editorRef}></div>;
+  const handleGetData = () => {
+    console.log(editorStateRef.current?.data.get());
+  };
+  return (
+    <div>
+      <div ref={editorRef}></div>
+      <button
+        className={`p-[5px] mt-5 ml-1 border-solid border-[2px] border-black `}
+        onClick={() => handleGetData()}
+      >
+        Show Value
+      </button>
+    </div>
+  );
 };
 
 export default EazyEditor;

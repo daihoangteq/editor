@@ -1,11 +1,11 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
+import EazyEditor from "@/components/CkEditor";
+import MarkdownEditor from "@/components/Markdown";
 
 export default function Home() {
   const [img, setImg] = useState<null | File>(null);
+  const [mode, setMode] = useState<"classic" | "markdown">("classic");
   const handleSubmit = () => {
     if (!img) return;
     const formData = new FormData();
@@ -24,11 +24,25 @@ export default function Home() {
   };
   return (
     <div>
-      <input
-        type="file"
-        onChange={(e) => setImg(e.target.files ? e.target.files[0] : null)}
-      />
-      <button onClick={() => handleSubmit()}>Submit</button>
+      <div className="flex w-full justify-center items-center my-5">
+        <button
+          className={`p-[10px] mx-10 border-solid border-[2px] border-black ${
+            mode === "classic" ? "bg-green-400" : "bg-white"
+          }`}
+          onClick={() => setMode("classic")}
+        >
+          Classic Editor
+        </button>
+        <button
+          className={`p-[10px] mx-10 border-solid border-[2px] border-black ${
+            mode === "markdown" ? "bg-green-400" : "bg-white"
+          }`}
+          onClick={() => setMode("markdown")}
+        >
+          Markdown Editor
+        </button>
+      </div>
+      {mode === "classic" ? <EazyEditor /> : <MarkdownEditor />}
     </div>
   );
 }
