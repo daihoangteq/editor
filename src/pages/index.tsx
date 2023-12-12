@@ -24,25 +24,7 @@ export default function Home() {
   };
   return (
     <div>
-      <div className="flex w-full justify-center items-center my-5">
-        <button
-          className={`p-[10px] mx-10 border-solid border-[2px] border-black ${
-            mode === "classic" ? "bg-green-400" : "bg-white"
-          }`}
-          onClick={() => setMode("classic")}
-        >
-          Classic Editor
-        </button>
-        <button
-          className={`p-[10px] mx-10 border-solid border-[2px] border-black ${
-            mode === "markdown" ? "bg-green-400" : "bg-white"
-          }`}
-          onClick={() => setMode("markdown")}
-        >
-          Markdown Editor
-        </button>
-      </div>
-      {mode === "classic" ? <EazyEditor /> : <MarkdownEditor />}
+      <MarkdownEditor />
     </div>
   );
 }

@@ -1,7 +1,4 @@
 const toolbarEditor = [
-  "bold",
-  "italic",
-  "strikethrough",
   "heading",
   "code",
   "quote",
